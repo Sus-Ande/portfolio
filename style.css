@@ -6,35 +6,35 @@
   --gap-m: 2rem;
   --gap-s: 1rem;
   --border-radius: 0px;
-  --color-dark: #222;
-  --color-dark-200: #444;
-  --color-dark-300: #666;
-  --color-dark-400: #888;
-  --color-dark-500: #999;
-  --color-dark-600: #b5b5b5;
-  --color-dark-700: #d5d5d5;
-  --color-dark-800: #f1f1f1;
-  --color-dark-900: #f8f4f4;
-  --color-accent: #fc00df;
-  --color-accent-200: #fc00df;
-  --color-accent-300: #fc00df;
-  --color-accent-400: #fc00df;
-  --color-accent-500: #fc00df;
-  --color-accent-600: #fc00df;
-  --color-accent-700: #fc00df;
-  --color-accent-800: #fc00df;
-  --color-accent-900: #fc00df;
-  --color-light: #efead8;
-  --color-light-200: #efead8;
-  --color-light-300: #efead8;
-  --color-light-400: #efead8;
-  --color-light-500: #efead8;
-  --color-light-600: #efead8;
-  --color-light-700: #efead8;
-  --color-light-800: #efead8;
-  --color-light-900: #efead8;
-  --font-sans: "Areal", sans-serif;
-  --font-serif: "Georgia", serif;
+  --color-dark: hsl(0, 0%, 13%);
+  --color-dark-200: #3b3b3b;
+  --color-dark-300: #545454;
+  --color-dark-400: #6e6e6e;
+  --color-dark-500: #878787;
+  --color-dark-600: hsl(0, 0%, 63%);
+  --color-dark-700: hsl(0, 0%, 73%);
+  --color-dark-800: hsl(0, 0%, 83%);
+  --color-dark-900: #ededed;
+  --color-accent: hsl(180, 100%, 20%);
+  --color-accent-200: hsl(180, 100%, 30%);
+  --color-accent-300: hsl(180, 100%, 40%);
+  --color-accent-400: hsl(180, 100%, 50%);
+  --color-accent-500: hsl(180, 100%, 60%);
+  --color-accent-600: hsl(180, 100%, 70%);
+  --color-accent-700: hsl(180, 100%, 80%);
+  --color-accent-800: hsl(180, 100%, 90%);
+  --color-accent-900: #B37812;
+  --color-light: hsl(0, 0%, 96%);
+  --color-light-200: hsl(0, 0%, 81%);
+  --color-light-300: hsl(0, 4%, 91%);
+  --color-light-400: hsl(0, 4%, 81%);
+  --color-light-500: hsl(0, 4%, 71%);
+  --color-light-600: hsl(0, 4%, 61%);
+  --color-light-700: hsl(0, 4%, 51%);
+  --color-light-800: hsl(0, 4%, 41%);
+  --color-light-900: hsl(0, 4%, 31%);
+  --font-sans: "Open-sans", sans-serif;
+  --font-serif: "Fairplex", serif;
   --line-height: 1.5;
   --font-scale: 1.25;
   --font-size: 1rem;
@@ -61,10 +61,35 @@ img {
 
 body {
   font-family: var(--font-sans);
+  font-size: var(--font-size-2);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+}
+
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
 }
 
 p {
@@ -82,22 +107,6 @@ a:hover {
 
 li {
   line-height: var(--line-height);
-}
-
-.test {
-  background-color: blue;
-  color: #fff;
-  padding: 1rem 1rem;
-  border-radius: 2rem;
-  border: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  display: inline-block;
-  text-decoration: none;
-}
-.test:hover {
-  background-color: var(--color-accent);
-  color: var(--color-light);
 }
 
 .hero {
