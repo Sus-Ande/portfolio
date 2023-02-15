@@ -1,0 +1,67 @@
+@use '../../components/details';
+
+.projects {
+    background-color: black; //prel
+    max-width: 100%;
+    min-height: 100vh;
+    color: var(--color-light);
+    display: flex;
+    justify-content: center;
+
+    @include details.separator(center, 1.5rem);
+
+    &__title {
+        display: flex;
+       
+    }
+
+
+}
+
+.swiper {
+    width: 100%;
+    height: 400px;
+      
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 3rem;
+    width: 800px;
+    // opacity: 1;
+    // transition: 0.5s;
+
+
+    // &:not(.swiper-slid-active) {
+    //     opacity: .5;
+    // }
+
+}
+
+.swiper-slide-active {
+    .slide-2__content {
+        opacity: 1;
+    }
+}
+
+// Lägg in bild
+.slide-1 {
+   
+}
+
+.slide-2 {
+    
+    // &__content {
+        
+    //     opacity: 0.5;
+    //     transition: opacity .5s 1.5s;
+    //     width: 100%;
+    }
+}
+
+.slide-3 {
+   
+}

@@ -6,15 +6,15 @@
     $border-color: var(--var-light)
     ) {
     background-color: $background;
-    color: #fff;
-    padding: 1rem 1.5rem;
+    color: $color;
     border: 1px solid $border-color;
-    border-radius: 0;
+    padding: 1rem 1.5rem;
     font-size: var(--font-size-1);
     font-family: var(--font-sans);
+    border-radius: 0;
     font-weight: 400;
-    text-decoration: none;
     display: inline-block;
+    text-decoration: none;
     &:hover {
         background-color: $hover-background;
         color: $hover-color;

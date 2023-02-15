@@ -1,3 +1,52 @@
+@use '../../components/buttons' as button;
+
 .hero {
-    background-color: black;
+    background-color: black; // Prel
+    max-width: 100%;
+    min-height: 100vh;
+    color: var(--color-light);
+    display: grid;
+    justify-content: center;
+    padding-top: 5rem;
+   
+    
+    &__content {
+        
+    }
+    
+    &__title {
+        
+        font-family: var(--font-serif);
+        font-size: 8rem;
+        margin: 0;
+        justify-content: center;
+    }
+
+    &__text {
+        
+        font-family: var(--font-sans);
+        justify-content: center;
+        
+
+        // &__text span {
+        //     color: var(--color-accent);
+        // }
+
+    } 
+
+    &__button,
+    &__button-right {
+        
+        display: flex;
+        // justify-content: center;
+        margin: 1rem;
+        
+        @include button.default($border-color: var(--color-accent));
+      
+    }
+
+    
+
+
+
 }

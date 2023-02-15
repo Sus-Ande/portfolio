@@ -1,116 +1,20 @@
-:root {
-  --section-gap: 8rem;
-  --section-gap-inner: calc( var(--section-gap) *0.75);
-  --gap-xl: 4rem;
-  --gap-l: 3rem;
-  --gap-m: 2rem;
-  --gap-s: 1rem;
-  --border-radius: 0px;
-  --color-dark: hsl(0, 0%, 13%);
-  --color-dark-200: #3b3b3b;
-  --color-dark-300: #545454;
-  --color-dark-400: #6e6e6e;
-  --color-dark-500: #878787;
-  --color-dark-600: hsl(0, 0%, 63%);
-  --color-dark-700: hsl(0, 0%, 73%);
-  --color-dark-800: hsl(0, 0%, 83%);
-  --color-dark-900: #ededed;
-  --color-accent: hsl(180, 100%, 20%);
-  --color-accent-200: hsl(180, 100%, 30%);
-  --color-accent-300: hsl(180, 100%, 40%);
-  --color-accent-400: hsl(180, 100%, 50%);
-  --color-accent-500: hsl(180, 100%, 60%);
-  --color-accent-600: hsl(180, 100%, 70%);
-  --color-accent-700: hsl(180, 100%, 80%);
-  --color-accent-800: hsl(180, 100%, 90%);
-  --color-accent-900: #B37812;
-  --color-light: hsl(0, 0%, 96%);
-  --color-light-200: hsl(0, 0%, 81%);
-  --color-light-300: hsl(0, 4%, 91%);
-  --color-light-400: hsl(0, 4%, 81%);
-  --color-light-500: hsl(0, 4%, 71%);
-  --color-light-600: hsl(0, 4%, 61%);
-  --color-light-700: hsl(0, 4%, 51%);
-  --color-light-800: hsl(0, 4%, 41%);
-  --color-light-900: hsl(0, 4%, 31%);
-  --font-sans: "Open-sans", sans-serif;
-  --font-serif: "Fairplex", serif;
-  --line-height: 1.5;
-  --font-scale: 1.25;
-  --font-size: 1rem;
-  --font-size-1: var(--font-size);
-  --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
-  --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
-  --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
-  --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
-  --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
-}
+/* Error: unmatched "}".
+ *    ,
+ * 63 | }
+ *    | ^
+ *    '
+ *   src\scss\pages\home\_projects.scss 63:1  @forward
+ *   src\scss\pages\home\_index.scss 2:1      @forward
+ *   src\scss\pages\_index.scss 1:1           @use
+ *   src\scss\style.scss 4:1                  root stylesheet */
 
-* {
-  box-sizing: border-box;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: unmatched "}".\a    \2577 \a 63 \2502  }\d\a    \2502  ^\a    \2575 \a   src\\scss\\pages\\home\\_projects.scss 63:1  @forward\a   src\\scss\\pages\\home\\_index.scss 2:1      @forward\a   src\\scss\\pages\\_index.scss 1:1           @use\a   src\\scss\\style.scss 4:1                  root stylesheet';
 }
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-2);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-}
-
-h1 {
-  font-size: var(--font-size-6);
-}
-
-h2 {
-  font-size: var(--font-size-5);
-}
-
-h3 {
-  font-size: var(--font-size-4);
-}
-
-h4 {
-  font-size: var(--font-size-3);
-}
-
-h5 {
-  font-size: var(--font-size-2);
-}
-
-h6 {
-  font-size: var(--font-size-1);
-}
-
-p {
-  line-height: var(--line-height);
-}
-
-a {
-  color: var(--color-dark);
-  text-decoration: none;
-  line-height: var(--line-height);
-}
-a:hover {
-  color: var(--color-accent);
-}
-
-li {
-  line-height: var(--line-height);
-}
-
-.hero {
-  background-color: black;
-}
-
-/*# sourceMappingURL=style.css.map */
