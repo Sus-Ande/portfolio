@@ -1,47 +1,77 @@
 @use '../../components/buttons' as button;
+@use '../../components/details';
+@use '../../utilities/responsive';
 
 .hero {
     background-color: black; // Prel
-    max-width: 100%;
+    // width: 100%;
     min-height: 100vh;
-    color: var(--color-light);
-    display: grid;
-    justify-content: center;
     padding-top: 5rem;
-   
+
+    // Responsive
+    @include responsive.max(62.5rem) {
+        
+
+    }
+
+    
+    &__inner {
+        width: 100%;
+        color: var(--color-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
         
     }
     
     &__title {
         
         font-family: var(--font-serif);
-        font-size: 8rem;
+        // font-size: 8rem;
+        font-size: clamp(4rem, 12vw, 8rem);
         margin: 0;
-        justify-content: center;
+        // justify-content: center;
     }
 
     &__text {
         
         font-family: var(--font-sans);
-        justify-content: center;
+        font-weight: 300;
+        font-style: normal;
+        font-size: clamp(var(--font-size-1), 5vw, var(--font-size-3));   //Hur minska texten?!
+        // justify-content: center;
+        // align-items: center;
         
 
-        // &__text span {
-        //     color: var(--color-accent);
-        // }
+        span {
+            color: var(--color-accent);
+            font-size: var(--font-size-5);
+            font-weight: 700;
+        }
 
     } 
 
     &__button,
     &__button-right {
-        
-        display: flex;
-        // justify-content: center;
+        // width: auto;
+        // height: auto;
+        // // display: flex;
+        // // justify-content: center;
         margin: 1rem;
         
-        @include button.default($border-color: var(--color-accent));
+        @include button.default;
+
+        @include details.frame();
       
     }
 

@@ -1,0 +1,46 @@
+.site-footer {
+    background-color: black;
+    display: grid;
+    max-height: 200px;
+
+    &__inner {
+        // grid-column: inner;
+        // position: relative;
+        // z-index: 2;
+
+    }
+
+    .social {
+        margin-top: 100px;
+        // margin-bottom: 0;
+        // padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+
+        &:hover {
+            color: var(--color-accent);
+            
+        }
+    }
+    
+    &__copyright {
+        color: var(--color-dark-500);
+        font-size: var(--font-size-1);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    // &__logo {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     margin-top: 100px;
+    // }
+
+
+
+
+
+}

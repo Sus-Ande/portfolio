@@ -1,0 +1,77 @@
+@use '../../components/details';
+@use '../../components/buttons' as button;
+
+.about {
+    background-color: black;
+    display: grid;
+    min-height: 100vh;
+    padding-top: 50px;
+    overflow: hidden;
+    
+    // display: flex;
+    // gap: var(--section-gap-inner);
+    
+    
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        // grid-template-columns: var(--grid-container);
+        grid-template-columns: 2fr 1fr;
+        max-width: 800px;
+        margin: 0 auto;
+        
+        
+    }
+    
+    &__title {
+        text-align: center;
+        color: var(--color-light);
+                
+        @include details.separator(center, 1.5rem);
+    }
+
+    &__content {
+        display: block;
+        color: var(--color-light);
+
+
+    }
+
+    &__first {
+        font-size: var(--font-size-2);
+        color: var(--color-light);
+    }
+
+    &__second {
+        font-size: var(--font-size-1);
+        
+    }
+
+    &__image {
+        margin: 0;
+        position: relative;
+        
+        svg {
+            display: block;
+            // width: 100px;
+            // height: 100px;
+
+        }
+      
+    }
+
+    &__button {
+        width: auto;
+        height: auto;
+        margin-top: 1rem;
+        font-size: smaller;
+        
+        @include button.default($border-color: var(--color-accent));
+
+        @include details.frame();
+    }
+
+
+
+}    

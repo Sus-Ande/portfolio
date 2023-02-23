@@ -10,12 +10,13 @@ const swiper = new Swiper('.swiper', {
     coverflowEffect: {
         slidesShadows: true,
         rotate: 0,
-        depth: 200,
+        depth: 400,
     },
-  
+    
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
+        dynamicBullets: true,
     },
   
     // Navigation arrows

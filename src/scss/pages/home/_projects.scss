@@ -1,26 +1,38 @@
 @use '../../components/details';
 
+
 .projects {
     background-color: black; //prel
-    max-width: 100%;
+    // max-width: 100%;
     min-height: 100vh;
-    color: var(--color-light);
-    display: flex;
-    justify-content: center;
-
-    @include details.separator(center, 1.5rem);
-
+    gap: var(--section-gap-inner);
+    
+    display: grid;
+    
+    
+    &__inner {
+        // max-width: 1200px;
+        margin: 0 auto;
+    }
+    
     &__title {
-        display: flex;
-       
+        text-align: center;
+        color: var(--color-light);
+        
+        @include details.separator(center, 1.5rem);
     }
 
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 
 }
 
 .swiper {
     width: 100%;
-    height: 400px;
+    height: 500px;
       
 }
 
@@ -30,7 +42,8 @@
     align-items: center;
     color: #fff;
     font-size: 3rem;
-    width: 800px;
+    max-width: 800px;
+    
     // opacity: 1;
     // transition: 0.5s;
 
@@ -45,6 +58,16 @@
     .slide-2__content {
         opacity: 1;
     }
+
+    // &__round-button {
+
+    //     border-radius: 50%;
+    //     background-color: var(--color-accent);
+    //     color: var(--color-light);
+    //     $hover-color: var(--color-light);
+    //     $border-color: var(--var-light);
+    // }
+    
 }
 
 // Lägg in bild
@@ -60,8 +83,36 @@
     //     transition: opacity .5s 1.5s;
     //     width: 100%;
     }
-}
+
 
 .slide-3 {
    
+}
+
+// Vänster pil
+.swiper-button-prev {
+    left: 20%;
+    color: var(--color-light);
+
+}
+
+// Höger pil
+.swiper-button-next {
+    right: 20%;
+    color: var(--color-light);
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 25px;
+
+    &-bullet {
+        background-color: var(--color-light);
+
+        --swiper-pagination-bullet-inactive-opacity: 0.5;
+    }
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+    
 }

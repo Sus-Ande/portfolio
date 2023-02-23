@@ -1,0 +1,73 @@
+@use '../../components/details';
+@use '../../components/buttons' as button;
+
+.blogs {
+    background-color: black;
+    // max-width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    display: grid;
+    gap: var(--section-gap-inner);
+    
+    &__inner {
+        margin: 0 32px;
+    }
+    
+    &__title { 
+        text-align: center;
+        color: var(--color-light);
+        
+        @include details.separator(center, 1.5rem);
+    }
+    
+    
+    
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--gap-xl);
+        max-width: 800px;
+        margin: 0 auto;
+        color: var(--color-light-400);
+    }
+    
+    
+}
+
+.blog {
+    
+    &__title {
+        color: var(--color-light);
+        font-size: var(--font-size-3);
+    }
+
+    &__content {
+        color: var(--color-light-400);
+        font-size: var(--font-size-1);
+    }
+
+    &__button {
+        width: auto;
+        height: auto;
+        margin-top: 1rem;
+        font-size: smaller;
+        
+        @include button.default($border-color: var(--color-accent));
+
+        @include details.frame();
+    }
+
+    &__link {
+       color: var(--color-light);
+       font-size: var(--font-size-1);
+       display: flex;
+       justify-content: flex-end;
+       margin-top: 3rem;
+       gap: var(--gap-s);
+       opacity: 0.66;
+    }
+
+
+
+
+}

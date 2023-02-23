@@ -1,19 +1,33 @@
+@use '../utilities/responsive';
+
 .site-header {
+    position: fixed;
     background-color: black; // Prel
-    max-width: 100%;
+    width: 100%;
     height: 125px;
-    color: var(--color-light);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    padding: 0 var(--gap-xl);
+    display: grid;
+    z-index: 999;
+    
+    
+    
+    
+    &__inner {
+        width: 100%;
+        // max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-light);
+    }
+    
     &__logo {
         margin-left: 4rem;
         margin-top: 1rem;
-       
+        
     }
-
+    
     &__list {
         margin: 0;
         padding: 0;
@@ -22,20 +36,29 @@
         list-style: none;
         gap: 3rem;
         
+        @include responsive.max(65rem) {
+            display: none;
+    
+        }
     }
     
     &__link {
         color: var(--color-light);
     }
+    
+    // .social {
+    //     margin-right: 3rem;
+    //     padding: 0;
+    //     display: flex;
+    //     list-style: none;
+    //     gap: 1.5rem;
 
-    .social {
-        margin-right: 3rem;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-    }
-
+    //     &:hover {
+    //         color: var(--color-accent);
+            
+    //     }
 
 
 }
+
+

@@ -13,3 +13,19 @@
         }
     }
 }
+
+@mixin frame( $color: var(--color-light), $margin: 3px ) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        border: 1px solid $color;
+        top: $margin;
+        bottom: $margin;
+        left: $margin;
+        right: $margin;
+        opacity: 0.34;
+    }
+}    
