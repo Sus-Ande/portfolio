@@ -15,8 +15,12 @@
     font-weight: 400;
     display: inline-block;
     text-decoration: none;
+    transition: font-size 0.2s, background-color 0.5s;
+
     &:hover {
         background-color: $hover-background;
         color: $hover-color;
+        font-size: var(--font-size-2);
     }
+
 }

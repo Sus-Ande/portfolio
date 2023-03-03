@@ -1,4 +1,4 @@
-@mixin separator( $align: left, $margin: var(--gap-m) ) {
+@mixin separator( $align: left, $margin: var(--gap-s) ) {
     &:after {
         content: '';
         display: block;

@@ -1,23 +1,40 @@
 @use '../../components/details';
 @use '../../components/buttons' as button;
 
+@use '../../utilities/responsive';
+
 .blogs {
     background-color: black;
-    // max-width: 100%;
-    min-height: 100vh;
     padding-top: 50px;
     display: grid;
-    gap: var(--section-gap-inner);
     
     &__inner {
-        margin: 0 32px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        
+        
+        @include responsive.max(800px) {
+            padding: var(--gap-m);
+            
+        }
     }
     
     &__title { 
-        text-align: center;
         color: var(--color-light);
         
-        @include details.separator(center, 1.5rem);
+        @include details.separator(1.5rem);
+
+        animation: fadeIn 5s 1s forwards;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1
+        }
+    }
     }
     
     
@@ -26,15 +43,26 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: var(--gap-xl);
-        max-width: 800px;
         margin: 0 auto;
         color: var(--color-light-400);
+
+        @include responsive.max(800px) {
+            grid-template-columns: 1fr;
+    
+            
+        }
     }
+    
     
     
 }
 
 .blog {
+
+    img {
+        width: 100%;
+        box-shadow: 5px 5px 10px -5px var(--color-light-400);
+    }
     
     &__title {
         color: var(--color-light);
@@ -44,17 +72,21 @@
     &__content {
         color: var(--color-light-400);
         font-size: var(--font-size-1);
-    }
+       
+    }  
 
     &__button {
-        width: auto;
-        height: auto;
         margin-top: 1rem;
         font-size: smaller;
         
         @include button.default($border-color: var(--color-accent));
 
         @include details.frame();
+
+         // Responsive
+         @include responsive.max(800px) {
+            padding: 0.5rem 1rem;
+        }
     }
 
     &__link {
@@ -65,7 +97,24 @@
        margin-top: 3rem;
        gap: var(--gap-s);
        opacity: 0.66;
+       transition: all 0.5s;
+        &:hover {
+            color: var(--color-light);
+            font-size: var(--font-size-2);
+            opacity: 1;
+        }
+
+        svg {
+            transition: all 0.5s;
+        &:hover {
+            color: var(--color-light);
+            opacity: 1;
+        }
+        }
+       
     }
+
+    
 
 
 

@@ -1,26 +1,46 @@
 @use '../../components/details';
+@use '../../utilities/responsive';
 
 
 .projects {
     background-color: black; //prel
-    // max-width: 100%;
-    min-height: 100vh;
     gap: var(--section-gap-inner);
+    padding-top: 50px;
     
-    display: grid;
-    
-    
-    &__inner {
-        // max-width: 1200px;
-        margin: 0 auto;
-    }
+    // display: grid;
     
     &__title {
-        text-align: center;
+    
+        grid-column: span 2;
+        margin: 0 auto;
+        max-width: 800px;
         color: var(--color-light);
         
-        @include details.separator(center, 1.5rem);
+        @include details.separator(1.5rem);
+
+        animation: fadeIn 5s 1s forwards;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1
+        }
     }
+    }
+    
+    &__inner {
+        margin: 0 auto;
+        // max-width: 800px;
+        // width: 100%;
+        
+        @include responsive.max(800px) {
+            padding: var(--gap-m);
+            
+        }
+    }
+    
 
     img {
         height: 100%;
@@ -33,7 +53,8 @@
 .swiper {
     width: 100%;
     height: 500px;
-      
+    
+    
 }
 
 .swiper-slide {
@@ -55,18 +76,9 @@
 }
 
 .swiper-slide-active {
-    .slide-2__content {
+    .view-project {
         opacity: 1;
     }
-
-    // &__round-button {
-
-    //     border-radius: 50%;
-    //     background-color: var(--color-accent);
-    //     color: var(--color-light);
-    //     $hover-color: var(--color-light);
-    //     $border-color: var(--var-light);
-    // }
     
 }
 
@@ -77,11 +89,6 @@
 
 .slide-2 {
     
-    // &__content {
-        
-    //     opacity: 0.5;
-    //     transition: opacity .5s 1.5s;
-    //     width: 100%;
     }
 
 
@@ -89,17 +96,70 @@
    
 }
 
+.view-project {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    svg {
+        max-width: 100px;
+        max-height: 100px;
+        transition: all 0.5s;
+
+    }
+
+    &:hover {
+        stroke: var(--color-accent);
+    }
+}
+
 // Vänster pil
 .swiper-button-prev {
-    left: 20%;
+    left: 30%;
     color: var(--color-light);
+
+    transition: color 0.5s;
+
+     // Responsive
+    @include responsive.max(1440px) {
+        left:20%;
+    }
+    @include responsive.max(1024px) {
+        left:15%;
+    }
+    
+    @include responsive.max(800px) {
+        left:8%;
+    }
+    
 
 }
 
 // Höger pil
 .swiper-button-next {
-    right: 20%;
+    right: 30%;
     color: var(--color-light);
+
+    transition: color 0.5s;
+
+    // &:hover {
+    //     color: var(--color-accent);
+    // }
+
+     // Responsive
+    @include responsive.max(1440px) {
+        right:20%;
+    }
+
+    @include responsive.max(1024px) {
+        right:15%;
+    }
+
+    @include responsive.max(800px) {
+        right:8%;
+    }
 }
 
 .swiper-pagination {

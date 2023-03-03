@@ -1,41 +1,55 @@
 @use '../../components/details';
 @use '../../components/buttons' as button;
+@use '../../utilities/responsive';
 
 .about {
     background-color: black;
-    display: grid;
-    min-height: 100vh;
     padding-top: 50px;
-    overflow: hidden;
     
-    // display: flex;
-    // gap: var(--section-gap-inner);
-    
-    
-    
-    &__inner {
-        grid-column: inner;
-        display: grid;
-        // grid-template-columns: var(--grid-container);
-        grid-template-columns: 2fr 1fr;
-        max-width: 800px;
-        margin: 0 auto;
-        
-        
-    }
     
     &__title {
-        text-align: center;
+        grid-column: span 2;
         color: var(--color-light);
                 
-        @include details.separator(center, 1.5rem);
+        @include details.separator(1.5rem);
+
+        animation: fadeIn 5s 1s forwards;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1
+        }
     }
+    }
+    
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        
+        @include responsive.max(800px) {
+            display: block;
+            // grid-template-columns: 1fr;
+            padding: var(--gap-m);
+        }
+        
+    }
+    
 
     &__content {
         display: block;
         color: var(--color-light);
 
-
+        @include responsive.max(800px) {
+            display: grid;
+            grid-template-columns: 1fr; 
+            order: 1;
+        }
     }
 
     &__first {
@@ -45,31 +59,52 @@
 
     &__second {
         font-size: var(--font-size-1);
+        color: var(--color-light-400);
         
     }
 
     &__image {
-        margin: 0;
         position: relative;
+        max-width: 200px;
+        max-height: 200px;
         
-        svg {
-            display: block;
-            // width: 100px;
-            // height: 100px;
-
+        animation: fadeIn 5s 1s forwards;
+        
+        
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1
+            }
+        }
+        
+        @include responsive.max(800px) {
+            // order: 1;
+            justify-content: center;
         }
       
     }
+
 
     &__button {
         width: auto;
         height: auto;
         margin-top: 1rem;
+        margin-bottom: 20px;
         font-size: smaller;
         
         @include button.default($border-color: var(--color-accent));
 
         @include details.frame();
+
+         // Responsive
+         @include responsive.max(800px) {
+            padding: 0.5rem 1rem;
+            max-width: 6rem;
+        }
     }
 
 
